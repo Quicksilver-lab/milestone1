@@ -4,14 +4,14 @@ if (toggleButton && skillsDiv) {
     toggleButton.addEventListener('click', function () {
         if (skillsDiv.style.display === 'none') {
             skillsDiv.style.display = 'block';
-            toggleButton.value = "Hide Skills";
+            toggleButton.innerText = "Hide Skills"; // Use innerText or textContent for button text
         }
         else {
             skillsDiv.style.display = 'none';
-            toggleButton.value = "Show Skills";
+            toggleButton.innerText = "Show Skills";
         }
     });
 }
 else {
-    console.log("Required element not found in the DOM");
+    console.error("Required element not found in the DOM");
 }
