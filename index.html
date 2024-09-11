@@ -3,42 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milestone 1</title>
+    <title>Areesha Tanoli Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header><h2>Personal Information</h2></header> 
+   <header>
+       <div class="header-content">
+           <img src="project.jpg" alt="Areesha Tanoli Profile Picture" class="profile-pic">
+           <h1>Areesha Tanoli</h1>
+           <p>Teacher & Programmer | TypeScript & JavaScript Enthusiast</p>
+       </div>
+   </header>
+
    <main>
-       <section>Name: Areesha Tanoli</section> 
-       <section>Contact no: 0313 2102489</section> 
-       <section>Email: Areeshaa942@gmail.com</section> 
-       <section>LinkedIn: <div>Areesha Tanoli</div></section> 
-       <img src="project.jpg" alt="Profile Picture"> 
-       <hr>
-
-       <h2>Education</h2> 
-       <section>Intermediate Crescent College from Karachi (2021-2023)</section>
-       <hr>
-
-       <h2>Skills</h2>
-       <div id="skills">
-           <section>TypeScript</section> 
-           <section>JavaScript</section> 
-           <section>English Language</section> 
-           <section>MS Word</section> 
-           <section>Excel</section>
-       </div>
-
-       <div class="togglecontainer">
-           <input type="button" value="Hide Skills" id="toggleButton" class="togglebutton">
-       </div>
+       <section class="section">
+           <h2>Contact Information</h2>
+           <ul class="info-list">
+               <li><strong>Name:</strong> Areesha Tanoli</li>
+               <li><strong>Phone:</strong> 0313 2102489</li>
+               <li><strong>Email:</strong> <a href="mailto:Areeshaa942@gmail.com">Areeshaa942@gmail.com</a></li>
+               <li><strong>LinkedIn:</strong> <a href="#">Areesha Tanoli</a></li>
+           </ul>
+       </section>
 
        <hr>
 
-       <h2>Work Experience</h2>
-       <section>2 Years in Teaching</section>
-       <section>8 Months in Programming</section>
+       <section class="section">
+           <h2>Education</h2>
+           <p>Intermediate, Crescent College, Karachi (2021-2023)</p>
+       </section>
+
+       <hr>
+
+       <section class="section">
+           <h2>Skills</h2>
+           <div id="skills">
+               <ul class="skills-list">
+                   <li>TypeScript</li>
+                   <li>JavaScript</li>
+                   <li>English Language</li>
+                   <li>MS Word</li>
+                   <li>Excel</li>
+               </ul>
+           </div>
+           <div class="togglecontainer">
+               <input type="button" value="Hide Skills" id="toggleButton" class="togglebutton">
+           </div>
+       </section>
+
+       <hr>
+
+       <section class="section">
+           <h2>Work Experience</h2>
+           <p>2 Years in Teaching</p>
+           <p>8 Months in Programming</p>
+       </section>
    </main>
+
+   <footer>
+       <p>© 2024 Areesha Tanoli | Powered by TypeScript & JavaScript</p>
+   </footer>
 
    <script src="index.js" type="module"></script>
 </body>
