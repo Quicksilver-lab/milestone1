@@ -9,20 +9,21 @@ body {
     color: #f1f1f1;
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    text-align: center;
     padding: 20px;
+    text-align: center;
 }
 
 header {
     background-color: #292929;
-    padding: 30px;
+    padding: 50px;
     border-radius: 10px;
     margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
 
 .header-content {
-    display: inline-block;
-    text-align: center;
+    animation: slide-down 1s ease-out;
 }
 
 .profile-pic {
@@ -31,6 +32,7 @@ header {
     border-radius: 50%;
     margin-bottom: 10px;
     border: 5px solid #2ecc71;
+    animation: fade-in 2s;
 }
 
 h1 {
@@ -42,13 +44,31 @@ h1 {
 p {
     color: #bdc3c7;
     font-size: 1.1rem;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fade-in-text 2s forwards;
 }
 
-.section {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.card {
     background-color: #333;
     padding: 20px;
     margin: 10px auto;
     border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 h2 {
@@ -87,6 +107,7 @@ a:hover {
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
 .togglebutton:hover {
@@ -102,4 +123,34 @@ footer {
 
 footer p {
     color: #bdc3c7;
+}
+
+/* Animations */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-text {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
