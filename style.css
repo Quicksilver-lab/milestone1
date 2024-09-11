@@ -18,12 +18,6 @@ header {
     padding: 50px;
     border-radius: 10px;
     margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.header-content {
-    animation: slide-down 1s ease-out;
 }
 
 .profile-pic {
@@ -32,7 +26,6 @@ header {
     border-radius: 50%;
     margin-bottom: 10px;
     border: 5px solid #2ecc71;
-    animation: fade-in 2s;
 }
 
 h1 {
@@ -45,44 +38,46 @@ p {
     color: #bdc3c7;
     font-size: 1.1rem;
     margin-top: 10px;
-    opacity: 0;
-    animation: fade-in-text 2s forwards;
 }
 
-.container {
+.tab-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
-.card {
-    background-color: #333;
-    padding: 20px;
-    margin: 10px auto;
-    border-radius: 10px;
-    width: 300px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.tablinks {
+    background-color: #2ecc71;
+    border: none;
+    color: white;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+.tablinks:hover {
+    background-color: #27ae60;
 }
 
-h2 {
-    color: #2ecc71;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+.tablinks.active {
+    background-color: #27ae60;
+}
+
+.tabcontent {
+    display: none;
+    animation: fadeIn 0.5s ease;
 }
 
 .info-list, .skills-list {
     list-style: none;
+    padding: 0;
 }
 
 li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 10px;
 }
 
@@ -93,25 +88,6 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-.togglecontainer {
-    margin-top: 15px;
-}
-
-.togglebutton {
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.togglebutton:hover {
-    background-color: #27ae60;
 }
 
 footer {
@@ -126,31 +102,11 @@ footer p {
 }
 
 /* Animations */
-@keyframes fade-in {
-    0% {
+@keyframes fadeIn {
+    from {
         opacity: 0;
     }
-    100% {
+    to {
         opacity: 1;
-    }
-}
-
-@keyframes fade-in-text {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slide-down {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(0);
     }
 }
